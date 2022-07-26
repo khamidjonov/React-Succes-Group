@@ -1,0 +1,126 @@
+$background: rgba(200, 200, 200, 0.2);
+$blue: #01a0da;
+$grey: #b5c5d3;
+$red: #ff3838;
+$black: rgba(0, 0, 0, 0.8);
+$light-black: #354f5b;
+$white: #ffffff;
+
+* {
+  color: $light-black;
+}
+
+.registration-container {
+  background-color: $background;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .registration-nav-container {
+
+    width: 100vw;
+    height: 4rem;
+    padding: 0.2rem 4rem;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .registration-form-container {
+    background: $white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+
+    &.confirm-code {
+      align-items: center;
+
+      .form-item > input {
+        text-align: center;
+        letter-spacing: 5px;
+      }
+    }
+
+    label {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 300;
+    }
+
+    .form-item {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      border: 2px solid $grey;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &.active {
+        border-color: $blue;
+      }
+
+      &.incorrectPassword {
+        border-color: $red;
+
+
+        &+p.incorrect {
+          margin-top: 0.2rem;
+          color: $red;
+          font-size: 0.6rem;
+        }
+      }
+
+      input {
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .password {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    .check-policy {
+      margin: 0.8rem 0 0.2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+
+      label {
+        clear: both;
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+      &~.btn.full {
+        margin: 0.2rem 0;
+        width: 100%;
+      }
+
+      &~.enter {
+        margin: 0.5rem 0;
+        color: $blue;
+        font-size: 0.8rem;
+        align-self: center;
+
+      }
+    }
+  }
+}

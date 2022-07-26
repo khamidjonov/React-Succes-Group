@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$background: rgba(200, 200, 200, 0.2);
+$blue: #01a0da;
+$grey: #b5c5d3;
+$red: #ff3838;
+$black: rgba(0, 0, 0, 0.8);
+$light-black: #354f5b;
+$white: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid $blue;
+  padding: 0.4rem 2rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+
+  color: $blue;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+
+  &.fill {
+    background: $blue;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $blue;
+    }
+  }
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    padding: 0.3rem 1.5rem;
+  }
+}
